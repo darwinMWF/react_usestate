@@ -1,14 +1,20 @@
 import { useState } from "react";
+import { data } from "./data";
+import ArtistData from "./renderarrywithuseState";
 
 
 
 function App() {
+
+  const [count ,setcount] = useState(0);
   const [value, setvalue] = useState(0);
   const [istrue, setbool] = useState(true);
   const [object, setobject] = useState({
     name: "mukesh",
     age: 45,
   });
+
+
 
   const [arry, setarry] = useState(["mukesh", "sursh", "rajnikant"]);
   const [arryvalue, setarryvalue] = useState("");
@@ -55,9 +61,29 @@ function App() {
     return <ul>{list}</ul>;
   };
 
+  const handlePlus = ()=>{
+    console.log(data.length)
+    setcount((count)=>count+1);
+  }
+
+  
+
   return (
     <>
-      <h1>{value}</h1>
+      {/* {count}
+      <br />
+      <button onClick={()=>{
+        handlePlus()
+        handlePlus()
+        handlePlus()
+        handlePlus()
+      }}>+4</button>
+      <button onClick={()=>{
+        handlePlus()
+        handlePlus()
+        handlePlus()
+      }}>+3</button> */}
+      {/* <h1>{value}</h1>
       <input
         type="text"
         placeholder="enter your name"
@@ -78,7 +104,9 @@ function App() {
 
       <input type="text" value={arryvalue} onChange={updatearry} />
       <button onClick={adddata}>add</button>
-      <RenderArry />
+      <RenderArry /> */}
+
+      <ArtistData/>
     </>
   );
 }
