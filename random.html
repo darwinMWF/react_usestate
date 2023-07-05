@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <button onclick="renderarry()">next</button>
+    <script>
+        const arry = ["mukesh","suresh","ajay"];
+        const heading = document.getElementsByTagName("h1")[0];
+        let index = 0;
+        function renderarry(){
+            heading.innerHTML = "";
+            if(index < arry.length){
+                heading.innerHTML += `${arry[index]}`;
+                index++;
+            }
+           
+        }
+    </script>
+</body>
+</html>
